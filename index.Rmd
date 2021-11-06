@@ -17,5 +17,7 @@ Hello everyone, my name is ShaoCong Zhang and I am a master student from China. 
 
 Here is my [resume](about.html).
 
+# Dashboard
 
+Here is the [dashboard](dashboard.html) of data "instacart".
 

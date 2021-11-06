@@ -1,0 +1,69 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+
+data("instacart")
+instacart = 
+  instacart %>% 
+  as_tibble(instacart)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+# Get bar plot get the aisle for which number of orders less than 1000
+instacart %>%
+  count(aisle) %>%
+  arrange(n) %>%
+  filter(
+    n < 1000
+  ) %>%
+  mutate(aisle = fct_reorder(aisle, n)) %>%
+  plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar", colors = "viridis")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+#Get the scatter plot of the consumers' aisle name and id, based on the production ID and the user ID
+#Since the dataset is so large, we randomly select 500 data from the dataset.
+set.seed(8105)
+rand.num = sample(1:nrow(instacart), 500)
+instacart.samp = instacart[rand.num,]
+instacart.samp %>%
+  mutate(text_label = str_c("Name of aisle:", aisle, "\nAisle ID: ", aisle_id)) %>% 
+  plot_ly(
+    x = ~user_id, y = ~product_id, type = "scatter", mode = "markers",
+    color = ~aisle, text = ~text_label, alpha = 0.5)
+```
+
+### Chart C
+
+```{r}
+# We get the box plot by looking into the order hour of day and the department of the aisle
+# We will use a larger dataset
+set.seed(8105)
+rand.num.large = sample(1:nrow(instacart), 5000)
+instacart.samp.large = instacart[rand.num.large,]
+instacart.samp.large %>% 
+  mutate(department = fct_reorder(department, order_hour_of_day)) %>% 
+  plot_ly(y = ~order_hour_of_day, color = ~department, type = "box", colors = "viridis")
+```
+
