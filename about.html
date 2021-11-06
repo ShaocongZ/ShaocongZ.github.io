@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Shaocong Zhang</title>
+
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="about.html">Resume</a>
+</li>
+<li>
+  <a href="mailto:&lt;eddiez1998@163.com&gt;">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/&lt;ShaocongZ&gt;/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Shaocong Zhang</h1>
+<h3 class="subtitle">347-925-3890 | <a href="mailto:eddiez1998@163.com" class="email">eddiez1998@163.com</a> | New York, NY 10032</h3>
+
+</div>
+
+
+<div id="education" class="section level1">
+<h1>Education</h1>
+<div id="columbia-university-new-york" class="section level3">
+<h3>Columbia University, New York</h3>
+<p>Master of Science, Fall 2021 -</p>
+</div>
+<div id="university-of-minnesota-minneapolis" class="section level3">
+<h3>University of Minnesota, Minneapolis</h3>
+<p>Bachelor of Science, Statistics, Fall 2018 - Fall 2020</p>
+<p>Bachelor of Arts, Mathematics, Fall 2018 - Fall 2020</p>
+<p>GPA: 3.89 / 4.0</p>
+</div>
+<div id="shandong-university-of-finance-and-economics-jinan-cn" class="section level3">
+<h3>Shandong University of Finance and Economics, Jinan, CN</h3>
+<p>Bachelor of Economics, Financial Mathematics, Fall 2016 - Spring 2020</p>
+</div>
+</div>
+<div id="projects" class="section level1">
+<h1>Projects</h1>
+<div id="consulting-project-on-prediction-of-the-minnesota-governor-minneapolis-mn" class="section level3">
+<h3>Consulting Project on Prediction of the Minnesota Governor Minneapolis, MN</h3>
+</div>
+<div id="university-of-minnesota-twin-cities-oct-2020" class="section level3">
+<h3>University of Minnesota, Twin Cities, OCT 2020</h3>
+<ul>
+<li><p>Analysed the data of the voters and gave a brief understanding of the voters’ information in Minnesota</p></li>
+<li><p>Started with a full logistic regression model and did the model selection process.</p></li>
+<li><p>Have a deeper understanding of the logistic regression and had learned to present the results in different kinds of plots.</p></li>
+</ul>
+</div>
+<div id="consulting-project-on-impact-of-clinicians-race-and-gender" class="section level3">
+<h3>Consulting Project on Impact of Clinicians’ Race and Gender</h3>
+</div>
+<div id="university-of-minnesota-twin-cities-sep-2020" class="section level3">
+<h3>University of Minnesota, Twin Cities, Sep 2020</h3>
+<ul>
+<li><p>Analysed the data of patients’ confidence of different clinicians’ race and gender and presented the result</p></li>
+<li><p>Started with a full linear regression model, did the model selection step by step and provided the final model.</p></li>
+<li><p>Presented the project by clear, straight forward and comprehend graphs and tables.</p></li>
+</ul>
+</div>
+<div id="introduction-to-research-project" class="section level3">
+<h3>Introduction to Research Project</h3>
+</div>
+<div id="university-of-minnesota-twin-cities-july-2020-august-2020" class="section level3">
+<h3>University of Minnesota, Twin Cities, July 2020-August 2020</h3>
+<ul>
+<li><p>Under the guidance of Professor Xiaoou Li and investigated two research papers, “Joint Maximum Likelihood Estimation for High-Dimensional Exploratory Factor Analysis”, “A Note on Exploratory Item Factor Analysis by Single Value Decomposition”</p></li>
+<li><p>Did the simulation study of the paper “Joint Maximum Likelihood Estimation for High-Dimensional Exploratory Factor Analysis”.</p></li>
+<li><p>Did a brief data analysis of the dataset “SAPA-Project: 22Dec2015 to 07Feb2017”.</p></li>
+</ul>
+</div>
+<div id="research-of-the-influence-of-bike-sharing-on-bicycle-retailers" class="section level3">
+<h3>Research of the Influence of Bike-Sharing on Bicycle Retailers</h3>
+</div>
+<div id="shandong-university-of-finance-and-economics-july-2017---sep-2017" class="section level3">
+<h3>Shandong University of Finance and Economics, July 2017 - Sep 2017</h3>
+<ul>
+<li><p>Designed the questionnaire for pedestrians, retailers, government officials and netizens and then constructed the dataset.</p></li>
+<li><p>Analyzed the answers of the questionnaire in the dataset using Excel and designed histograms and pie charts for explaining the data</p></li>
+</ul>
+</div>
+</div>
+<div id="skills" class="section level1">
+<h1>Skills</h1>
+<p>Technical: R, Python, C ++/C, Java, Word, PowerPoint, Excel</p>
+<p>Quantitative: Data wrangling, data analysis, data visualization, make website</p>
+</div>
+<div id="extracurricular-activities-awards" class="section level1">
+<h1>Extracurricular Activities &amp; Awards</h1>
+<div id="section" class="section level3">
+<h3>9/2016-9/2017</h3>
+<p>Member of Research Department of Tao Xingzhi Association and participated in the “Three Thousand Project” of Shandong University of Finance and Economics</p>
+</div>
+<div id="sept.2019" class="section level3">
+<h3>Sept.2019</h3>
+<p>Third class scholarship</p>
+</div>
+<div id="spring-2019" class="section level3">
+<h3>Spring 2019</h3>
+<p>Enrolled in Dean List of the UNM.</p>
+</div>
+<div id="winter-2019" class="section level3">
+<h3>Winter 2019</h3>
+<p>Participated ISSS MATCH Program and got the scholarship</p>
+</div>
+<div id="spring-2020" class="section level3">
+<h3>Spring 2020</h3>
+<p>Enrolled in Dean List of the UNM.</p>
+</div>
+<div id="section-1" class="section level3">
+<h3>1/2021</h3>
+<p>Got Distinction assessment of the Bachelor’s diploma in University of Minnesota.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

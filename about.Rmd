@@ -1,0 +1,94 @@
+---
+title: "Shaocong Zhang"
+subtitle: "347-925-3890 | eddiez1998@163.com | New York, NY 10032"
+output: html_document
+---
+
+# Education
+
+### Columbia University, New York
+
+Master of Science,                     Fall 2021 - 
+
+### University of Minnesota, Minneapolis
+
+Bachelor of Science, Statistics,  Fall 2018 - Fall 2020
+
+Bachelor of Arts, Mathematics,    Fall 2018 - Fall 2020
+
+GPA: 3.89 / 4.0
+
+### Shandong University of Finance and Economics, Jinan, CN
+
+Bachelor of Economics, Financial Mathematics,  Fall 2016 - Spring 2020
+
+# Projects
+
+### Consulting Project on Prediction of the Minnesota Governor  Minneapolis, MN
+
+### University of Minnesota, Twin Cities, OCT 2020
+
+- Analysed the data of the voters and gave a brief understanding of the voters’ information in Minnesota
+
+- Started with a full logistic regression model and did the model selection process.
+
+- Have a deeper understanding of the logistic regression and had learned to present the results in different kinds of plots.
+
+### Consulting Project on Impact of Clinicians’ Race and Gender 
+
+### University of Minnesota, Twin Cities, Sep 2020
+
+- Analysed the data of patients’ confidence of different clinicians’ race and gender and presented the result
+
+- Started with a full linear regression model, did the model selection step by step and provided the final model.
+
+- Presented the project by clear, straight forward and comprehend graphs and tables.
+
+### Introduction to Research Project
+
+### University of Minnesota, Twin Cities, July 2020-August 2020
+
+- Under the guidance of Professor Xiaoou Li and investigated two research papers, “Joint Maximum Likelihood Estimation for High-Dimensional Exploratory Factor Analysis”, “A Note on Exploratory Item Factor Analysis by Single Value Decomposition”
+
+- Did the simulation study of the paper “Joint Maximum Likelihood Estimation for High-Dimensional Exploratory Factor Analysis”. 
+
+- Did a brief data analysis of the dataset “SAPA-Project: 22Dec2015 to 07Feb2017”.
+
+### Research of the Influence of Bike-Sharing on Bicycle Retailers 
+
+### Shandong University of Finance and Economics, July 2017 - Sep 2017
+
+- Designed the questionnaire for pedestrians, retailers, government officials and netizens and then constructed the dataset.
+
+- Analyzed the answers of the questionnaire in the dataset using Excel and designed histograms and pie charts for explaining the data
+
+# Skills
+
+Technical: R, Python, C ++/C, Java, Word, PowerPoint, Excel 
+
+Quantitative: Data wrangling, data analysis, data visualization, make website
+
+# Extracurricular Activities & Awards
+
+### 9/2016-9/2017 
+Member of Research Department of Tao Xingzhi Association and participated in the "Three Thousand Project" of Shandong University of Finance and Economics
+
+### Sept.2019
+Third class scholarship
+
+### Spring 2019   
+Enrolled in Dean List of the UNM.
+
+### Winter 2019
+
+Participated ISSS MATCH Program and got the scholarship
+
+### Spring 2020   
+
+Enrolled in Dean List of the UNM.
+
+### 1/2021 
+Got Distinction assessment of the Bachelor's diploma in University of Minnesota.
+
+
+
